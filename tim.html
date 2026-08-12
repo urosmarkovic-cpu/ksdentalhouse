@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Naš tim — Dental House Kruševac</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #E7E9EC; color: #1B3A6B; font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+  a { color: #1B3A6B; text-decoration: none; }
+  a:hover { color: #101216; }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+  ::selection { background: #CBD9EC; }
+</style>
+</helmet>
+
+<div style="background:#FFFFFF">
+
+  <header style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:clamp(20px,2vw,30px) clamp(20px,3vw,44px)">
+    <a href="index.html" style="display:flex;align-items:center;gap:11px;font-family:'Instrument Sans',Inter,sans-serif;font-size:21px;letter-spacing:-.02em;white-space:nowrap"><img src="logo.png" alt="Dental House" style="width:42px;height:42px;min-width:42px;border-radius:999px;object-fit:cover;display:block;flex:none">Dental<span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:23px">House</span></a>
+    <div style="display:flex;align-items:center;gap:10px;flex:none">
+      <a href="tel:+381694614055" style="background:#FFFFFF;border:1px solid #E7E9EE;border-radius:999px;padding:11px 20px;font-size:14px;white-space:nowrap;transition:background .3s ease,border-color .3s ease" style-hover="background:#101216;border-color:#101216;color:#FFFFFF">069/461-40-55</a>
+    </div>
+  </header>
+
+  <section style="padding:clamp(20px,3vw,48px) clamp(20px,3vw,44px) 0;animation:riseIn 1s cubic-bezier(.22,.7,.2,1) both">
+    <div style="display:flex;align-items:center;gap:20px;padding-bottom:14px">
+      <span style="border:1px solid #E7E9EE;border-radius:999px;padding:8px 16px;font-size:12.5px;white-space:nowrap">Naš tim</span>
+    </div>
+    <div style="border-top:1px solid #E7E9EE;padding-top:clamp(28px,3.4vw,52px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,4vw,64px);align-items:end">
+      <h1 style="margin:0;font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:clamp(32px,4vw,60px);line-height:1.06;letter-spacing:-.03em;color:#1B3A6B;max-width:18ch">Ljudi koji će vas <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic">lečiti</span> — i to isti, svaki put.</h1>
+      <p style="margin:0;font-size:15.5px;line-height:1.75;color:#7A8AA6;font-weight:300;max-width:40ch">Dental House je ordinacija dva stomatologa u centru Kruševca, otvorena 2011. godine. Manje pregleda dnevno znači više vremena za objašnjenje, pitanja i pažljiv rad.</p>
+    </div>
+  </section>
+
+  <section style="padding:clamp(40px,5vw,80px) clamp(20px,3vw,44px) 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,64px);align-items:start">
+      <div style="position:relative;aspect-ratio:4/5"><image-slot id="tim-ana" shape="rounded" radius="20" placeholder="portret — dr Ana Stamenković"></image-slot></div>
+      <div>
+        <h2 style="margin:0;font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:clamp(24px,2.4vw,34px);letter-spacing:-.028em;color:#1B3A6B">Dr Ana Stamenković</h2>
+        <div style="margin-top:10px;font-size:13px;color:#9AA8BF;letter-spacing:.02em">Estetska i opšta stomatologija</div>
+        <p style="margin:22px 0 0;font-size:15.5px;line-height:1.75;color:#7A8AA6;font-weight:300;max-width:46ch">Ana je studirala u Nišu i od 2011. leči kruševačke familije — u mnogim slučajevima tri generacije iste. Radi estetske intervencije: izbeljivanje, kompozitne nadogradnje i keramičke ljuspice usklađene sa vašim zubima.</p>
+        <p style="margin:14px 0 0;font-size:15.5px;line-height:1.75;color:#7A8AA6;font-weight:300;max-width:46ch">Preuzima većinu prvih pregleda, jer neobično dobro ume sa ljudima koji dođu uplašeni. Van ordinacije je u bašti ili na bazenu sa dve ćerke.</p>
+        <div style="margin-top:26px;padding-top:20px;border-top:1px solid #E7E9EE;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:18px;font-size:13px;color:#5D7191">
+          <div><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#93A2B8;margin-bottom:8px">U ordinaciji</div>Od 2011.</div>
+          <div><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#93A2B8;margin-bottom:8px">Jezici</div>Srpski, engleski</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(40px,5vw,80px) clamp(20px,3vw,44px) 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,64px);align-items:start">
+      <div>
+        <h2 style="margin:0;font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:clamp(24px,2.4vw,34px);letter-spacing:-.028em;color:#1B3A6B">Dr Nemanja Radulović</h2>
+        <div style="margin-top:10px;font-size:13px;color:#9AA8BF;letter-spacing:.02em">Oralna hirurgija i implantologija</div>
+        <p style="margin:22px 0 0;font-size:15.5px;line-height:1.75;color:#7A8AA6;font-weight:300;max-width:46ch">Nemanja vodi hirurški deo: implante, ekstrakcije i slučajeve koje druge ordinacije upute nama. Svaku ugradnju prvo planira na 3D snimku i rado će vam je nacrtati na papiru ako je tako jasnije.</p>
+        <p style="margin:14px 0 0;font-size:15.5px;line-height:1.75;color:#7A8AA6;font-weight:300;max-width:46ch">Miran je do granice nežurnosti, što je upravo ono što želite od hirurga. Radi i protetiku koja dolazi posle implanta, pa rad ostaje u istim rukama.</p>
+        <div style="margin-top:26px;padding-top:20px;border-top:1px solid #E7E9EE;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:18px;font-size:13px;color:#5D7191">
+          <div><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#93A2B8;margin-bottom:8px">Planiranje</div>3D imaging</div>
+          <div><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#93A2B8;margin-bottom:8px">Jezici</div>Srpski, engleski</div>
+        </div>
+      </div>
+      <div style="position:relative;aspect-ratio:4/5"><image-slot id="tim-nemanja" shape="rounded" radius="20" placeholder="portret — dr Nemanja Radulović"></image-slot></div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,96px) clamp(20px,3vw,44px) clamp(20px,2vw,32px)">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;margin-bottom:clamp(20px,2.6vw,32px);font-size:14px;color:#5D7191" style-hover="color:#101216">← Početna</a>
+    <div style="background:linear-gradient(150deg,#F2F5F8 0%,#E6ECF2 60%,#DFE7EE 100%);border-radius:24px;padding:clamp(28px,3.4vw,60px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(24px,3vw,48px);align-items:center">
+      <h2 style="margin:0;font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:clamp(26px,3vw,42px);line-height:1.14;letter-spacing:-.028em;color:#1B3A6B;max-width:none;white-space:nowrap">Zakažite pregled kod <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic">Ane</span> ili <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic">Nemanje</span>.</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end">
+        <a href="tel:+381694614055" style="background:#101216;color:#FFFFFF;border-radius:999px;padding:16px 28px;font-size:14.5px;white-space:nowrap;transition:background .3s ease" style-hover="background:#1B3A6B;color:#FFFFFF">069/461-40-55</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+</body>
+</html>

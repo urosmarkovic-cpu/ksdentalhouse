@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dental House — Kruševac</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #E7E9EC; color: #1B3A6B; font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+  a { color: #1B3A6B; text-decoration: none; }
+  a:hover { color: #101216; }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+  ::selection { background: #CBD9EC; }
+  @media (max-width: 680px) {
+    [data-mobile-hide] { display: none !important; }
+    [data-hero-copy] h1 { max-width: 11ch !important; overflow-wrap: break-word; }
+    [data-hero-copy] p { max-width: 30ch !important; overflow-wrap: break-word; }
+    [data-phone-cta] { padding: 9px 14px !important; font-size: 12.5px !important; gap: 5px !important; }
+    header { padding-right: clamp(12px,3vw,20px) !important; }
+  }
+</style>
+</helmet>
+
+<div style="background:#FFFFFF">
+
+  <header style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:clamp(20px,2vw,30px) clamp(20px,3vw,44px)">
+    <a href="#top" style="display:flex;align-items:center;gap:11px;font-family:'Instrument Sans',Inter,sans-serif;font-size:21px;letter-spacing:-.02em;white-space:nowrap"><img src="logo.png" alt="Dental House" style="width:42px;height:42px;min-width:42px;border-radius:999px;object-fit:cover;display:block;flex:none">Dental<span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:23px">House</span></a>
+    <nav data-mobile-hide style="display:flex;align-items:center;gap:clamp(14px,2vw,30px);font-size:14px;color:#5D7191;white-space:nowrap;flex:none">
+      <a href="#onama" style="color:#5D7191" style-hover="color:#101216">O nama</a>
+      <a href="#usluge" style="color:#5D7191" style-hover="color:#101216">Usluge</a>
+      <a href="#ordinacija" style="color:#5D7191" style-hover="color:#101216">Ordinacija</a>
+      <a href="#poseta" style="color:#5D7191" style-hover="color:#101216">Prva poseta</a>
+      <a href="#tim" style="color:#5D7191" style-hover="color:#101216">Tim</a>
+      <a href="#preposle" style="color:#5D7191" style-hover="color:#101216">Pre i posle</a>
+      <a href="#kontakt" style="color:#5D7191" style-hover="color:#101216">Kontakt</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px;flex:none">
+      <a href="tel:+381694614055" data-phone-cta style="background:#FFFFFF;border:1px solid #E7E9EE;border-radius:999px;padding:11px 20px;font-size:14px;white-space:nowrap;display:flex;align-items:center;gap:8px;transition:background .3s ease,border-color .3s ease" style-hover="background:#101216;border-color:#101216;color:#FFFFFF">069/461-40-55</a>
+    </div>
+  </header>
+
+  <section id="top" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:clamp(28px,3vw,48px);align-items:stretch;padding:clamp(8px,1.5vw,22px) clamp(20px,3vw,44px) 0">
+    <div style="display:flex;flex-direction:column;justify-content:space-between;gap:clamp(36px,5vw,64px);animation:riseIn 1s cubic-bezier(.22,.7,.2,1) both;padding-top:clamp(16px,3vw,48px)">
+      <div data-hero-copy>
+        <h1 style="font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:clamp(40px,4.6vw,68px);line-height:1.06;letter-spacing:-.03em;margin:0;max-width:16ch;color:#1B3A6B">Zdrav osmeh počinje od <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;letter-spacing:-.01em">poverenja</span>, poseta po poseta.</h1>
+        <p style="margin:clamp(20px,2.4vw,30px) 0 0;font-size:16px;line-height:1.65;color:#7A8AA6;font-weight:300;max-width:40ch">Dental House je ordinacija dva stomatologa u centru Kruševca. Radimo bez žurbe: svaka poseta počinje razgovorom, a završava se planom i cenom koje ste prihvatili pre početka.</p>
+        <button onClick="{{ book }}" style="margin-top:clamp(24px,2.8vw,36px);border:0;cursor:pointer;background:#101216;color:#FFFFFF;font-family:Inter,sans-serif;font-size:14.5px;padding:17px 28px;border-radius:999px;display:inline-flex;align-items:center;gap:10px;white-space:nowrap;transition:background .3s ease,transform .3s ease" style-hover="background:#1B3A6B;transform:translateY(-1px)">Zakažite pregled <span style="font-size:12px">↗</span></button>
+        <div style="display:flex;flex-wrap:wrap;gap:clamp(24px,3vw,44px);margin-top:clamp(28px,3.2vw,40px)">
+          <div>
+            <div style="font-family:'Instrument Sans',Inter,sans-serif;font-size:clamp(24px,2.4vw,32px);letter-spacing:-.03em;line-height:1;color:#1B3A6B">98<span style="font-size:.5em">%</span></div>
+            <div style="margin-top:6px;font-size:12px;color:#7A8AA6">Zadovoljnih pacijenata</div>
+          </div>
+          <div>
+            <div style="font-family:'Instrument Sans',Inter,sans-serif;font-size:clamp(24px,2.4vw,32px);letter-spacing:-.03em;line-height:1;color:#1B3A6B">15<span style="font-size:.5em">+</span></div>
+            <div style="margin-top:6px;font-size:12px;color:#7A8AA6">Godina iskustva</div>
+          </div>
+          <div>
+            <div style="font-family:'Instrument Sans',Inter,sans-serif;font-size:clamp(24px,2.4vw,32px);letter-spacing:-.03em;line-height:1;color:#1B3A6B">4.9<span style="font-size:.42em;color:#E3A63C">★</span></div>
+            <div style="margin-top:6px;font-size:12px;color:#7A8AA6">Prosečna ocena</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="position:relative;min-height:clamp(380px,44vw,620px);animation:riseIn 1.2s cubic-bezier(.22,.7,.2,1) both;animation-delay:.1s">
+      <image-slot id="v2-hero" shape="rounded" radius="24" placeholder="pacijent koji se smeje, prirodno svetlo"></image-slot>
+    </div>
+  </section>
+
+  <section id="onama" style="padding:clamp(48px,6vw,96px) clamp(20px,3vw,44px) 0">
+    <div style="position:relative;display:flex;align-items:center;gap:20px;padding-bottom:14px">
+      <span style="border:1px solid #E7E9EE;border-radius:999px;padding:8px 16px;font-size:12.5px;color:#1B3A6B;white-space:nowrap;margin:0 auto">O nama</span>
+      <span style="font-size:12.5px;color:#9AA8BF;position:absolute;right:0">(01)</span>
+    </div>
+    <div data-reveal="" style="padding-top:clamp(24px,3vw,44px)">
+      <div style="position:relative;display:flex;justify-content:center">
+        <p style="margin:0;text-align:center;font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:clamp(26px,3.1vw,46px);line-height:1.18;letter-spacing:-.025em;color:#1B3A6B;max-width:34ch">
+          Gradimo odnose koji traju — <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic">na poverenju i pažnji</span>. Naš tim se stara da svaka poseta bude <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic">udobna</span> i prilagođena vama.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ordinacija" style="padding:clamp(36px,4.5vw,72px) clamp(20px,3vw,44px) 0">
+    <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:clamp(12px,1.4vw,20px)">
+      <div style="position:relative;aspect-ratio:4/5"><image-slot id="v2-gal1" shape="rounded" radius="16" placeholder="čekaonica"></image-slot></div>
+      <div style="position:relative;aspect-ratio:4/5"><image-slot id="v2-gal2" shape="rounded" radius="16" placeholder="ordinacija, stolica"></image-slot></div>
+      <div style="position:relative;aspect-ratio:4/5"><image-slot id="v2-gal3" shape="rounded" radius="16" placeholder="detalj, prirodno svetlo"></image-slot></div>
+      <div style="position:relative;aspect-ratio:4/5"><image-slot id="v2-gal4" shape="rounded" radius="16" placeholder="hodnik / ulaz"></image-slot></div>
+    </div>
+    <div style="margin-top:14px;font-size:12.5px;color:#7A8AA6;text-align:center">Naša ordinacija u Kruševcu — pogledajte prostor pre nego što dođete</div>
+  </section>
+
+  <section id="usluge" style="padding:clamp(48px,6vw,96px) clamp(20px,3vw,44px) 0">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:14px">
+      <span style="border:1px solid #E7E9EE;border-radius:999px;padding:8px 16px;font-size:12.5px;white-space:nowrap">Naše usluge</span>
+      <span style="font-size:12.5px;color:#9AA8BF">(02)</span>
+    </div>
+    <div data-reveal="" style="border-top:1px solid #E7E9EE;padding-top:clamp(28px,3.4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,3vw,48px);align-items:start">
+      <div style="display:flex;flex-direction:column">
+        <div onMouseEnter="{{ s0 }}" onClick="{{ s0 }}" style="{{ row0 }}">
+          <div style="display:flex;align-items:baseline;gap:10px">
+            <span style="font-family:'Instrument Sans',Inter,sans-serif;font-size:clamp(20px,1.9vw,27px);letter-spacing:-.025em">Ortodoncija</span>
+            <span style="font-size:11px;color:#9AA8BF">01</span>
+          </div>
+          <div style="{{ sub0 }}">Folijski aparati, fiksne proteze</div>
+        </div>
+        <div onMouseEnter="{{ s1 }}" onClick="{{ s1 }}" style="{{ row1 }}">
+          <div style="display:flex;align-items:baseline;gap:10px">
+            <span style="font-family:'Instrument Sans',Inter,sans-serif;font-size:clamp(20px,1.9vw,27px);letter-spacing:-.025em">Estetska stomatologija</span>
+            <span style="font-size:11px;color:#9AA8BF">02</span>
+          </div>
+          <div style="{{ sub1 }}">Izbeljivanje, ljuspice, kompozit</div>
+        </div>
+        <div onMouseEnter="{{ s2 }}" onClick="{{ s2 }}" style="{{ row2 }}">
+          <div style="display:flex;align-items:baseline;gap:10px">
+            <span style="font-family:'Instrument Sans',Inter,sans-serif;font-size:clamp(20px,1.9vw,27px);letter-spacing:-.025em">Implantologija</span>
+            <span style="font-size:11px;color:#9AA8BF">03</span>
+          </div>
+          <div style="{{ sub2 }}">Implanti, hirurgija, protetika</div>
+        </div>
+        <div onMouseEnter="{{ s3 }}" onClick="{{ s3 }}" style="{{ row3 }}">
+          <div style="display:flex;align-items:baseline;gap:10px">
+            <span style="font-family:'Instrument Sans',Inter,sans-serif;font-size:clamp(20px,1.9vw,27px);letter-spacing:-.025em">Dečja stomatologija</span>
+            <span style="font-size:11px;color:#9AA8BF">04</span>
+          </div>
+          <div style="{{ sub3 }}">Preventiva, zalivanje fisura</div>
+        </div>
+      </div>
+      <div style="position:relative;min-height:clamp(300px,32vw,420px)">
+        <div style="{{ img0 }}"><image-slot id="v2-serv-orto" shape="rounded" radius="18" placeholder="ortodoncija — folijski aparat"></image-slot></div>
+        <div style="{{ img1 }}"><image-slot id="v2-serv-est" shape="rounded" radius="18" placeholder="estetska stomatologija — osmeh"></image-slot></div>
+        <div style="{{ img2 }}"><image-slot id="v2-serv-imp" shape="rounded" radius="18" placeholder="implantologija — 3D snimak / rad"></image-slot></div>
+        <div style="{{ img3 }}"><image-slot id="v2-serv-deca" shape="rounded" radius="18" placeholder="dečja stomatologija — dete u stolici"></image-slot></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="poseta" style="padding:clamp(48px,6vw,96px) clamp(20px,3vw,44px) 0">
+    <div style="position:relative;display:flex;align-items:center;gap:20px;padding-bottom:14px">
+      <span style="border:1px solid #E7E9EE;border-radius:999px;padding:8px 16px;font-size:12.5px;white-space:nowrap;margin:0 auto">Prva poseta</span>
+      <span style="font-size:12.5px;color:#9AA8BF;position:absolute;right:0">(03)</span>
+    </div>
+    <div data-reveal="" style="padding-top:clamp(24px,3vw,44px)">
+      <div style="text-align:center;max-width:34ch;margin:0 auto clamp(32px,4vw,56px)">
+        <h2 style="margin:0;font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:clamp(24px,2.6vw,38px);line-height:1.15;letter-spacing:-.028em;color:#1B3A6B">Tri koraka, i <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic">bez iznenađenja</span> između.</h2>
+        <p style="margin:18px auto 0;font-size:14.5px;line-height:1.7;color:#7A8AA6;font-weight:300;max-width:38ch">Znate unapred kako izgleda svaki termin i koliko traje. Ništa ne počinje istog dana ako vi to ne želite.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(20px,2.6vw,36px);align-items:start">
+      <div style="border-top:1px solid #E7E9EE;padding-top:clamp(18px,2vw,26px)">
+        <div style="font-size:11.5px;color:#9AA8BF;letter-spacing:.06em">01</div>
+        <h3 style="margin:clamp(14px,1.6vw,20px) 0 10px;font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:clamp(20px,1.9vw,27px);letter-spacing:-.025em;color:#1B3A6B">Zakažite</h3>
+        <p style="margin:0;font-size:14px;line-height:1.7;color:#7A8AA6;font-weight:300;max-width:32ch">Pozovite ili ostavite broj — javljamo se istog radnog dana i nalazimo termin koji vam odgovara.</p>
+      </div>
+      <div style="border-top:1px solid #E7E9EE;padding-top:clamp(18px,2vw,26px)">
+        <div style="font-size:11.5px;color:#9AA8BF;letter-spacing:.06em">02</div>
+        <h3 style="margin:clamp(14px,1.6vw,20px) 0 10px;font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:clamp(20px,1.9vw,27px);letter-spacing:-.025em;color:#1B3A6B">Dođite na pregled</h3>
+        <p style="margin:0;font-size:14px;line-height:1.7;color:#7A8AA6;font-weight:300;max-width:32ch">Detaljan pregled i digitalni snimci, pa pisani plan sa cenom pre nego što bilo šta počne.</p>
+      </div>
+      <div style="border-top:1px solid #E7E9EE;padding-top:clamp(18px,2vw,26px)">
+        <div style="font-size:11.5px;color:#9AA8BF;letter-spacing:.06em">03</div>
+        <h3 style="margin:clamp(14px,1.6vw,20px) 0 10px;font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:clamp(20px,1.9vw,27px);letter-spacing:-.025em;color:#1B3A6B">Terapija i kontrola</h3>
+        <p style="margin:0;font-size:14px;line-height:1.7;color:#7A8AA6;font-weight:300;max-width:32ch">Radimo vašim tempom, a posle šest meseci se vidimo na kontroli — bez dodatnih troškova.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tim" style="padding:clamp(48px,6vw,96px) clamp(20px,3vw,44px) 0">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:14px">
+      <span style="border:1px solid #E7E9EE;border-radius:999px;padding:8px 16px;font-size:12.5px;white-space:nowrap">Naš tim</span>
+      <span style="font-size:12.5px;color:#9AA8BF">(04)</span>
+    </div>
+    <div data-reveal="" style="border-top:1px solid #E7E9EE;padding-top:clamp(28px,3.4vw,52px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,64px);align-items:center">
+      <div>
+        <h2 style="margin:0;font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:clamp(26px,3vw,44px);line-height:1.12;letter-spacing:-.028em;color:#1B3A6B;max-width:20ch">Dva stomatologa, <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic">iste dve ruke</span> od prvog pregleda do kontrole.</h2>
+        <p style="margin:clamp(20px,2.4vw,28px) 0 0;font-size:15px;line-height:1.75;color:#7A8AA6;font-weight:300;max-width:44ch">Dr Ana Stamenković vodi estetsku i opštu stomatologiju i preuzima većinu prvih pregleda. Dr Nemanja Radulović radi hirurški deo: implante, ekstrakcije i slučajeve koje druge ordinacije upute nama.</p>
+        <p style="margin:14px 0 0;font-size:15px;line-height:1.75;color:#7A8AA6;font-weight:300;max-width:44ch">Leči vas onaj stomatolog koji vas je pregledao — vaša istorija ostaje u sobi sa vama, bez prepričavanja iznova.</p>
+        <a href="tim.html" style="margin-top:clamp(24px,2.8vw,34px);background:#101216;color:#FFFFFF;border-radius:999px;padding:15px 26px;font-size:14px;display:inline-flex;align-items:center;gap:9px;white-space:nowrap;transition:background .3s ease,transform .3s ease" style-hover="background:#1B3A6B;color:#FFFFFF;transform:translateY(-1px)">Više o stomatolozima <span style="font-size:12px">↗</span></a>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.4vw,18px)">
+        <div>
+          <div style="position:relative;aspect-ratio:3/4"><image-slot id="v2-tim-ana" shape="rounded" radius="16" placeholder="dr Ana Stamenković"></image-slot></div>
+          <div style="margin-top:10px;font-size:12.5px;color:#7A8AA6">Dr Ana Stamenković<br><span style="color:#9AA8BF">Estetska i opšta stomatologija</span></div>
+        </div>
+        <div>
+          <div style="position:relative;aspect-ratio:3/4"><image-slot id="v2-tim-nem" shape="rounded" radius="16" placeholder="dr Nemanja Radulović"></image-slot></div>
+          <div style="margin-top:10px;font-size:12.5px;color:#7A8AA6">Dr Nemanja Radulović<br><span style="color:#9AA8BF">Oralna hirurgija i implantologija</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preposle" style="padding:clamp(48px,6vw,96px) clamp(20px,3vw,44px) 0">
+    <div style="position:relative;display:flex;align-items:center;gap:20px;padding-bottom:14px">
+      <span style="border:1px solid #E7E9EE;border-radius:999px;padding:8px 16px;font-size:12.5px;white-space:nowrap;margin:0 auto">Pre i posle</span>
+      <span style="font-size:12.5px;color:#9AA8BF;position:absolute;right:0">(05)</span>
+    </div>
+    <div data-reveal="" style="padding-top:clamp(24px,3vw,44px)">
+      <div style="text-align:center;max-width:36ch;margin:0 auto clamp(30px,3.6vw,52px)">
+        <h2 style="margin:0;font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:clamp(24px,2.6vw,38px);line-height:1.15;letter-spacing:-.028em;color:#1B3A6B">Radovi iz naše ordinacije, <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic">bez retuširanja</span>.</h2>
+        <p style="margin:16px auto 0;font-size:14.5px;line-height:1.7;color:#7A8AA6;font-weight:300;max-width:40ch">Fotografije naših pacijenata, uz njihovu saglasnost. Isto svetlo, isti ugao, ista kamera — pre i posle terapije.</p>
+      </div>
+      <div style="max-width:640px;margin:0 auto">
+        <div style="position:relative;aspect-ratio:4/3;border-radius:20px;overflow:hidden">
+          <div style="{{ baCase0 }}">
+            <image-slot id="v2-ba1a" src="images/izbeljivanje-posle.png" shape="rect" placeholder="pre — keramičke ljuspice"></image-slot>
+            <div style="position:absolute;inset:0;overflow:hidden;clip-path:{{ baClip }}">
+              <image-slot id="v2-ba1b" src="images/izbeljivanje-pre.png" shape="rect" placeholder="posle — keramičke ljuspice"></image-slot>
+            </div>
+          </div>
+          <div style="{{ baCase1 }}">
+            <image-slot id="v2-ba2a" shape="rect" placeholder="pre — implant i krunica"></image-slot>
+            <div style="position:absolute;inset:0;overflow:hidden;clip-path:{{ baClip }}">
+              <image-slot id="v2-ba2b" shape="rect" placeholder="posle — implant i krunica"></image-slot>
+            </div>
+          </div>
+          <div style="{{ baCase2 }}">
+            <image-slot id="v2-ba3a" shape="rect" placeholder="pre — folijski aparati"></image-slot>
+            <div style="position:absolute;inset:0;overflow:hidden;clip-path:{{ baClip }}">
+              <image-slot id="v2-ba3b" shape="rect" placeholder="posle — folijski aparati"></image-slot>
+            </div>
+          </div>
+          <span style="position:absolute;left:14px;top:14px;background:rgba(255,255,255,.92);border-radius:999px;padding:6px 13px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#5D7191;pointer-events:none;z-index:3">Pre</span>
+          <span style="position:absolute;right:14px;top:14px;background:#101216;border-radius:999px;padding:6px 13px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#FFFFFF;pointer-events:none;z-index:3">Posle</span>
+          <div style="position:absolute;top:0;bottom:0;width:2px;background:#FFFFFF;pointer-events:none;z-index:3;left:{{ baPosPct }}"></div>
+          <div style="position:absolute;top:50%;width:38px;height:38px;border-radius:999px;background:#FFFFFF;box-shadow:0 8px 20px -8px rgba(16,20,22,.4);display:flex;align-items:center;justify-content:center;color:#1B3A6B;font-size:13px;pointer-events:none;z-index:3;transform:translate(-50%,-50%);left:{{ baPosPct }}">↔</div>
+          <input type="range" min="0" max="100" value="{{ baPos }}" onInput="{{ baSetPos }}" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;-webkit-appearance:none;appearance:none;z-index:4">
+        </div>
+        <div style="margin-top:18px;text-align:center">
+          <div style="font-family:'Instrument Sans',Inter,sans-serif;font-size:17px;letter-spacing:-.02em;color:#1B3A6B">{{ baTitle }}</div>
+          <div style="margin-top:6px;font-size:12.5px;line-height:1.6;color:#7A8AA6">{{ baSub }}</div>
+        </div>
+        <div style="display:flex;justify-content:center;gap:10px;margin-top:clamp(20px,2.6vw,28px)">
+          <button onClick="{{ baPrev }}" aria-label="Prethodni slučaj" style="width:46px;height:46px;border-radius:999px;border:1px solid #E7E9EE;background:transparent;cursor:pointer;color:#1B3A6B;font-size:16px;display:flex;align-items:center;justify-content:center;transition:background .3s ease,color .3s ease" style-hover="background:#101216;color:#FFFFFF">←</button>
+          <button onClick="{{ baNext }}" aria-label="Sledeći slučaj" style="width:46px;height:46px;border-radius:999px;border:1px solid #E7E9EE;background:transparent;cursor:pointer;color:#1B3A6B;font-size:16px;display:flex;align-items:center;justify-content:center;transition:background .3s ease,color .3s ease" style-hover="background:#101216;color:#FFFFFF">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,96px) clamp(20px,3vw,44px) 0">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:14px">
+      <span style="border:1px solid #E7E9EE;border-radius:999px;padding:8px 16px;font-size:12.5px;white-space:nowrap">Iskustva pacijenata</span>
+      <span style="font-size:12.5px;color:#9AA8BF">(06)</span>
+    </div>
+    <div data-reveal="" style="border-top:1px solid #E7E9EE;padding-top:clamp(28px,3.4vw,52px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,64px);align-items:center">
+        <div style="position:relative;padding-left:clamp(0px,4vw,64px);min-height:clamp(320px,34vw,430px)">
+          <div style="{{ pair0 }}">
+            <div style="position:relative;height:100%;max-width:340px;margin:0 auto"><image-slot id="v2-t0a" shape="rounded" radius="18" placeholder="portret — Milica"></image-slot></div>
+          </div>
+          <div style="{{ pair1 }}">
+            <div style="position:relative;height:100%;max-width:340px;margin:0 auto"><image-slot id="v2-t1a" shape="rounded" radius="18" placeholder="portret — Stefan"></image-slot></div>
+          </div>
+          <div style="{{ pair2 }}">
+            <div style="position:relative;height:100%;max-width:340px;margin:0 auto"><image-slot id="v2-t2a" shape="rounded" radius="18" placeholder="portret — Jovana"></image-slot></div>
+          </div>
+          <div style="position:absolute;left:0;bottom:clamp(12px,3vw,42px);width:clamp(96px,11vw,140px);height:clamp(110px,13vw,165px);z-index:1">
+            <div style="{{ nx0 }}"><image-slot id="v2-t0b" src="images/milica.png" shape="rounded" radius="14" placeholder="Milica, manji kadar"></image-slot></div>
+            <div style="{{ nx1 }}"><image-slot id="v2-t1b" shape="rounded" radius="14" placeholder="Stefan, manji kadar"></image-slot></div>
+            <div style="{{ nx2 }}"><image-slot id="v2-t2b" src="images/jovana.png" shape="rounded" radius="14" placeholder="Jovana, manji kadar"></image-slot></div>
+          </div>
+        </div>
+        <div>
+          <p style="margin:0;font-family:'Instrument Sans',Inter,sans-serif;font-size:clamp(20px,2.1vw,31px);line-height:1.35;letter-spacing:-.02em;color:#1B3A6B;max-width:26ch">— {{ quote }}</p>
+          <div style="margin-top:clamp(20px,2.4vw,30px);font-size:13.5px;color:#7A8AA6">{{ author }}</div>
+          <div style="margin-top:clamp(24px,3vw,40px);display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap">
+            <div>
+              <div style="font-size:12px;color:#9AA8BF">Zadovoljstvo pacijenata</div>
+              <div style="display:flex;align-items:center;gap:12px;margin-top:8px">
+                <div style="font-family:'Instrument Sans',Inter,sans-serif;font-size:clamp(26px,2.4vw,34px);letter-spacing:-.03em;line-height:1">4.9<span style="font-size:.45em;color:#7A8AA6">/5</span></div>
+                <div style="color:#E3A63C;font-size:14px;letter-spacing:.12em">★★★★★</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:10px">
+              <button onClick="{{ prev }}" aria-label="Prethodno iskustvo" style="width:46px;height:46px;border-radius:999px;border:1px solid #E7E9EE;background:transparent;cursor:pointer;color:#1B3A6B;font-size:16px;display:flex;align-items:center;justify-content:center;transition:background .3s ease,color .3s ease" style-hover="background:#101216;color:#FFFFFF">←</button>
+              <button onClick="{{ next }}" aria-label="Sledeće iskustvo" style="width:46px;height:46px;border-radius:999px;border:1px solid #E7E9EE;background:transparent;cursor:pointer;color:#1B3A6B;font-size:16px;display:flex;align-items:center;justify-content:center;transition:background .3s ease,color .3s ease" style-hover="background:#101216;color:#FFFFFF">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" style="padding:clamp(48px,6vw,96px) clamp(20px,3vw,44px) clamp(20px,2vw,32px)">
+    <div data-reveal="" style="background:linear-gradient(150deg,#F2F5F8 0%,#E6ECF2 60%,#DFE7EE 100%);border-radius:24px;padding:clamp(28px,3.4vw,60px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(28px,4vw,64px);align-items:start">
+        <div>
+          <h2 style="margin:0;font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:clamp(28px,3.2vw,46px);line-height:1.14;letter-spacing:-.028em;color:#1B3A6B;max-width:20ch">Osvetlite svoj <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic">osmeh</span> — sa sigurnošću i <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic">mirnom rukom</span>.</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:clamp(20px,2.6vw,36px)">
+          <div>
+            <div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#93A2B8">Adresa</div>
+            <div style="margin-top:10px;font-size:13.5px;line-height:1.6;color:#1B3A6B">Konstantina filozofa 10<br>37000 Kruševac</div>
+          </div>
+          <div>
+            <div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#93A2B8">Telefon</div>
+            <div style="margin-top:10px;font-size:13.5px;line-height:1.6;display:flex;flex-direction:column;gap:4px">
+              <a href="tel:+381694614055" style="color:#1B3A6B">069/461-40-55</a>
+              <a href="tel:+38137429792" style="color:#1B3A6B">037/429-792</a>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#93A2B8">Email</div>
+            <div style="margin-top:10px;font-size:13.5px;line-height:1.6"><a href="mailto:dentalhousekrusevac@gmail.com" style="color:#1B3A6B;overflow-wrap:anywhere">dentalhousekrusevac@gmail.com</a></div>
+          </div>
+          <div>
+            <div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#93A2B8">Radno vreme</div>
+            <div style="margin-top:10px;font-size:13.5px;line-height:1.6;color:#1B3A6B">Pon – Pet 09:00 – 19:00<br>Subota 09:00 – 14:00</div>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:clamp(24px,3vw,44px);margin-top:clamp(44px,6vw,96px)">
+        <div>
+          <div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#93A2B8;margin-bottom:16px">Ordinacija</div>
+          <div style="display:flex;flex-direction:column;gap:9px;font-size:13.5px">
+            <a href="#top">Početna</a>
+            <a href="#usluge">Usluge</a>
+            <a href="#kontakt">Kontakt</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#93A2B8;margin-bottom:16px">Tim</div>
+          <div style="display:flex;flex-direction:column;gap:9px;font-size:13.5px">
+            <span style="color:#5D7191">Dr Ana Stamenković</span>
+            <span style="color:#5D7191">Dr Nemanja Radulović</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#93A2B8;margin-bottom:16px">Mreže</div>
+          <div style="display:flex;gap:8px">
+            <a href="#kontakt" aria-label="Instagram" style="width:30px;height:30px;border-radius:999px;background:#101216;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:11px" style-hover="background:#1B3A6B;color:#FFFFFF">In</a>
+            <a href="#kontakt" aria-label="Facebook" style="width:30px;height:30px;border-radius:999px;background:#101216;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:11px" style-hover="background:#1B3A6B;color:#FFFFFF">Fb</a>
+            <a href="tel:+381694614055" aria-label="Telefon" style="width:30px;height:30px;border-radius:999px;background:#101216;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:11px" style-hover="background:#1B3A6B;color:#FFFFFF">Tel</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:clamp(28px,3.4vw,52px);padding-top:18px;border-top:1px solid #C6D0DC;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:12px;color:#7A8AA6">
+        <span>© 2026 Dental House, Kruševac</span>
+        <span>Privatna stomatološka ordinacija</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div style="{{ overlayStyle }}" onClick="{{ closeDrawer }}"></div>
+<aside style="{{ drawerStyle }}">
+  <div style="display:flex;justify-content:space-between;align-items:start;gap:20px">
+    <h3 style="font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:26px;letter-spacing:-.028em;margin:0;max-width:18ch;color:#1B3A6B">Ostavite broj i javljamo se <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic">istog dana</span>.</h3>
+    <button onClick="{{ closeDrawer }}" aria-label="Zatvori" style="border:1px solid #E7E9EE;background:transparent;cursor:pointer;width:36px;height:36px;border-radius:999px;color:#1B3A6B;font-size:15px;line-height:1;flex:none" style-hover="background:#F3F5F8">×</button>
+  </div>
+  <div style="{{ formStyle }}">
+    <label style="display:flex;flex-direction:column;gap:8px;font-size:12.5px;color:#7A8AA6">Ime
+      <input value="{{ name }}" onChange="{{ setName }}" placeholder="Vaše ime" style="border:1px solid #E7E9EE;border-radius:12px;padding:14px 16px;font-family:Inter,sans-serif;font-size:14.5px;color:#1B3A6B;background:#FFFFFF;outline:none" style-focus="border-color:#1B3A6B">
+    </label>
+    <label style="display:flex;flex-direction:column;gap:8px;font-size:12.5px;color:#7A8AA6">Telefon
+      <input value="{{ phone }}" onChange="{{ setPhone }}" placeholder="06x xxx xx xx" style="border:1px solid #E7E9EE;border-radius:12px;padding:14px 16px;font-family:Inter,sans-serif;font-size:14.5px;color:#1B3A6B;background:#FFFFFF;outline:none" style-focus="border-color:#1B3A6B">
+    </label>
+    <label style="display:flex;flex-direction:column;gap:8px;font-size:12.5px;color:#7A8AA6">O čemu se radi?
+      <select value="{{ topic }}" onChange="{{ setTopic }}" style="border:1px solid #E7E9EE;border-radius:12px;padding:14px 16px;font-family:Inter,sans-serif;font-size:14.5px;color:#1B3A6B;background:#FFFFFF;outline:none">
+        <option>Prvi pregled</option>
+        <option>Čišćenje i kontrola</option>
+        <option>Bol, što pre</option>
+        <option>Estetska terapija</option>
+        <option>Implanti ili hirurgija</option>
+        <option>Ortodoncija</option>
+      </select>
+    </label>
+    <button onClick="{{ send }}" style="border:0;cursor:pointer;background:#101216;color:#FFFFFF;font-family:Inter,sans-serif;font-size:14.5px;padding:16px 30px;border-radius:999px;margin-top:4px;transition:background .3s ease" style-hover="background:#1B3A6B">Pozovite me</button>
+    <p style="margin:0;font-size:12px;line-height:1.6;color:#93A2B8">Ili pozovite 069/461-40-55 — obično se javi jedan od stomatologa.</p>
+  </div>
+  <div style="{{ sentStyle }}">
+    <h4 style="font-family:'Instrument Sans',Inter,sans-serif;font-weight:400;font-size:21px;letter-spacing:-.025em;margin:0 0 10px;color:#1B3A6B">Hvala — imamo vaš broj.</h4>
+    <p style="margin:0;font-size:14px;line-height:1.7;color:#7A8AA6;font-weight:300">Javljamo se istog radnog dana, između 09 i 19. Ako je hitno, pozovite 069/461-40-55 odmah.</p>
+  </div>
+</aside>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;revealAnimations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;}}">
+class Component extends DCLogic {
+  state = { service: 1, t: 0, drawer: false, sent: false, name: "", phone: "", topic: "Prvi pregled", ba: 0, baPos: 50 };
+
+  baCases = [
+    { title: "Izbeljivanje zuba", sub: "jedna poseta" },
+    { title: "Implant u zoni osmeha", sub: "implant i krunica, 4 meseca" },
+    { title: "Ortodontska terapija", sub: "folijski aparati, 11 meseci" }
+  ];
+
+  quotes = [
+    { q: "Najbolje iskustvo kod stomatologa koje sam imala. Ceo plan smo prošli na ekranu pre nego što je bilo šta počelo, i prvi put nisam bila napeta u stolici.", a: "Milica J. — pacijentkinja od 2021." },
+    { q: "Našli su prslinu koju je druga ordinacija propustila, pokazali mi snimak i dali cenu istog popodneva. Posle dve posete je bilo završeno.", a: "Stefan P. — implant i krunica" },
+    { q: "Ćerka ima osam godina i pita kada idemo ponovo. To govori više o ovom mestu nego što ja mogu.", a: "Jovana M. — porodični pacijent" }
+  ];
+
+  show(el) { el.setAttribute("data-in", "1"); el.style.opacity = "1"; el.style.transform = "none"; }
+
+  arm() {
+    const all = document.querySelectorAll("[data-reveal]");
+    if (this.props.revealAnimations === false || !("IntersectionObserver" in window)) { all.forEach(el => this.show(el)); return; }
+    if (!this.io) {
+      this.io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { this.show(e.target); this.io.unobserve(e.target); } });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.02 });
+    }
+    all.forEach(el => {
+      if (el.dataset.armed) return;
+      el.dataset.armed = "1";
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.95) { this.show(el); return; }
+      el.style.opacity = "0";
+      el.style.transform = "translateY(20px)";
+      el.style.transition = "opacity .9s cubic-bezier(.22,.7,.2,1), transform .9s cubic-bezier(.22,.7,.2,1)";
+      this.io.observe(el);
+    });
+  }
+
+  componentDidMount() {
+    this.arm();
+    this.mo = new MutationObserver(() => this.arm());
+    this.mo.observe(document.body, { childList: true, subtree: true });
+  }
+
+  componentDidUpdate() { this.arm(); }
+
+  componentWillUnmount() {
+    if (this.io) this.io.disconnect();
+    if (this.mo) this.mo.disconnect();
+  }
+
+  renderVals() {
+    const act = this.state.service;
+    const rows = {}, subs = {};
+    for (let i = 0; i < 4; i++) {
+      const on = i === act;
+      rows["row" + i] = "cursor:pointer;padding:clamp(16px,1.8vw,22px) 0;border-bottom:1px solid #E7E9EE;transition:opacity .3s ease;opacity:" +
+        (on ? "1" : ".55") + ";color:#1B3A6B;font-weight:" + (on ? "500" : "400");
+      rows["img" + i] = "position:absolute;inset:0;transition:opacity .5s cubic-bezier(.22,.7,.2,1);opacity:" + (on ? "1" : "0") + ";pointer-events:" + (on ? "auto" : "none");
+      subs["sub" + i] = "font-family:Inter,sans-serif;font-size:12.5px;color:#7A8AA6;font-weight:300;overflow:hidden;transition:max-height .4s ease,opacity .3s ease,margin-top .3s ease;max-height:" +
+        (on ? "40px" : "0px") + ";opacity:" + (on ? "1" : "0") + ";margin-top:" + (on ? "8px" : "0px");
+    }
+    const pairs = {};
+    for (let i = 0; i < 3; i++) {
+      const on = i === this.state.t;
+      pairs["nx" + i] = "position:absolute;inset:0;transition:opacity .6s cubic-bezier(.22,.7,.2,1);opacity:" +
+        (i === (this.state.t + 1) % 3 ? "1" : "0") + ";pointer-events:" + (i === (this.state.t + 1) % 3 ? "auto" : "none");
+      pairs["pair" + i] = "position:absolute;inset:0;z-index:2;transition:opacity .6s cubic-bezier(.22,.7,.2,1),transform .7s cubic-bezier(.22,.7,.2,1);opacity:" +
+        (on ? "1" : "0") + ";transform:scale(" + (on ? "1" : ".97") + ") translateY(" + (on ? "0px" : "10px") + ");pointer-events:" + (on ? "auto" : "none");
+    }
+    const baCase = this.baCases[this.state.ba];
+    const baClipVal = 100 - this.state.baPos;
+    for (let i = 0; i < 3; i++) {
+      const on = i === this.state.ba;
+      pairs["baCase" + i] = "position:absolute;inset:0;transition:opacity .5s ease;opacity:" + (on ? "1" : "0") + ";pointer-events:" + (on ? "auto" : "none");
+    }
+    const q = this.quotes[this.state.t];
+    const drawerOpen = this.state.drawer;
+    return Object.assign(rows, subs, pairs, {
+      baClip: "inset(0 " + baClipVal + "% 0 0)",
+      baPosPct: this.state.baPos + "%",
+      baPos: this.state.baPos,
+      baSetPos: e => this.setState({ baPos: +e.target.value }),
+      baTitle: baCase.title,
+      baSub: baCase.sub,
+      baPrev: () => this.setState(s => ({ ba: (s.ba + 2) % 3, baPos: 50 })),
+      baNext: () => this.setState(s => ({ ba: (s.ba + 1) % 3, baPos: 50 })),
+      s0: () => this.setState({ service: 0 }), s1: () => this.setState({ service: 1 }),
+      s2: () => this.setState({ service: 2 }), s3: () => this.setState({ service: 3 }),
+      quote: q.q, author: q.a,
+      counter: "(0" + (this.state.t + 1) + " — 0" + this.quotes.length + ")",
+      prev: () => this.setState(s => ({ t: (s.t + this.quotes.length - 1) % this.quotes.length })),
+      next: () => this.setState(s => ({ t: (s.t + 1) % this.quotes.length })),
+      name: this.state.name, phone: this.state.phone, topic: this.state.topic,
+      setName: e => this.setState({ name: e.target.value }),
+      setPhone: e => this.setState({ phone: e.target.value }),
+      setTopic: e => this.setState({ topic: e.target.value }),
+      book: () => this.setState({ drawer: true, sent: false }),
+      closeDrawer: () => this.setState({ drawer: false }),
+      send: () => this.setState({ sent: true }),
+      overlayStyle: "position:fixed;inset:0;z-index:60;background:rgba(27,58,107,.26);transition:opacity .45s ease;opacity:" +
+        (drawerOpen ? "1" : "0") + ";pointer-events:" + (drawerOpen ? "auto" : "none"),
+      drawerStyle: "position:fixed;z-index:61;top:12px;right:12px;bottom:12px;width:min(410px,calc(100vw - 24px));background:#FFFFFF;border-radius:20px;padding:clamp(24px,3vw,36px);box-sizing:border-box;overflow-y:auto;box-shadow:0 40px 90px -40px rgba(27,58,107,.45);transition:transform .55s cubic-bezier(.22,.7,.2,1),opacity .4s ease;transform:translateX(" +
+        (drawerOpen ? "0" : "calc(100% + 24px)") + ");opacity:" + (drawerOpen ? "1" : "0") + ";pointer-events:" + (drawerOpen ? "auto" : "none"),
+      formStyle: "display:" + (this.state.sent ? "none" : "flex") + ";flex-direction:column;gap:16px;margin-top:28px",
+      sentStyle: "display:" + (this.state.sent ? "block" : "none") + ";margin-top:32px;padding-top:28px;border-top:1px solid #E7E9EE"
+    });
+  }
+}
+</script>
+</body>
+</html>
